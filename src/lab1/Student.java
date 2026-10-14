@@ -99,19 +99,6 @@ public class Student {
 
     }
 
-    public static void countStudentNeedsDormitory() {
-        int count = 0;
-
-        for (int i = 0; i < students.length; i++) {
-            Student s = students[i];
-            if (s.isNeedsDormitory()) {
-                ++count;
-            }
-        }
-
-        System.out.println("Количество студентов, нуждающихся в общежитии: " + count);
-    }
-
     public static void findFrenchStudiedInCollege() {
         System.out.println("Cписок студентов, изучавших французский язык в техникуме:");
         boolean found = false;
