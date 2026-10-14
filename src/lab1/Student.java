@@ -99,15 +99,6 @@ public class Student {
 
     }
 
-    public static void printStudent() {
-        System.out.println("\nХарактеристики студентов:");
-
-        for(int i = 0; i < students.length; i++) {
-            System.out.println(students[i]);
-        }
-
-    }
-
     public static void countStudentNeedsDormitory() {
         int count = 0;
 
