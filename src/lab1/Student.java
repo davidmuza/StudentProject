@@ -99,26 +99,6 @@ public class Student {
 
     }
 
-    public static void findFrenchStudiedInCollege() {
-        System.out.println("Cписок студентов, изучавших французский язык в техникуме:");
-        boolean found = false;
-
-        for (int i = 0; i < students.length; i++) {
-            Student s = students[i];
-            String previousEducation = s.getPreviousEducation().toLowerCase();
-            String languageStudied = s.getLanguageStudied().toLowerCase();
-            if (previousEducation.equals("техникум") && languageStudied.equals("французский")) {
-                System.out.println(s);
-                found = true;
-            }
-        }
-
-        if (!found) {
-            System.out.println("Студентов, изучавших французский язык в техникуме не найдено!");
-        }
-
-    }
-
     public static void sortStudentsByLastName() {
         if (students != null && students.length >= 2) {
             for(int i = 0; i < students.length - 1; i++) {
