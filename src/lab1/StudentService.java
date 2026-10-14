@@ -3,6 +3,17 @@ package lab1;
 import java.util.Scanner;
 
 public class StudentService {
+    private static Student[] students;
+
+    static {
+        students = new Student[]{
+                new Student("Иванов", true, "Школа", "Английский"),
+                new Student("Сидоров", true, "Техникум", "Немецкий"),
+                new Student("Смирнов", true, "Техникум", "Французский"),
+                new Student("Петров", false, "Техникум", "Французский")
+        };
+    };
+
     public static void printStudent() {
         System.out.println("\nХарактеристики студентов:");
 
