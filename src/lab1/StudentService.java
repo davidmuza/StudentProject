@@ -42,4 +42,19 @@ public class StudentService {
         }
 
     }
+
+    public static void sortStudentsByLastName() {
+        if (students != null && students.length >= 2) {
+            for(int i = 0; i < students.length - 1; i++) {
+                for(int j = 0; j < students.length - 1 - i; j++) {
+                    if (students[j].getLastName().compareTo(students[j + 1].getLastName()) > 0) {
+                        Student temp = students[j];
+                        students[j] = students[j + 1];
+                        students[j + 1] = temp;
+                    }
+                }
+            }
+
+        }
+    }
 }
