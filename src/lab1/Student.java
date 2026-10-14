@@ -7,16 +7,6 @@ public class Student {
     private boolean needsDormitory;
     private String previousEducation;
     private String languageStudied;
-    private static Student[] students;
-
-    static {
-        students = new Student[]{
-            new Student("Иванов", true, "Школа", "Английский"),
-            new Student("Сидоров", true, "Техникум", "Немецкий"),
-            new Student("Смирнов", true, "Техникум", "Французский"),
-            new Student("Петров", false, "Техникум", "Французский")
-        };
-    };
 
     public Student(String lastName, boolean needsDormitory, String previousEducation, String languageStudied) {
         this.setLastName(lastName);
@@ -84,18 +74,5 @@ public class Student {
         }
 
         this.languageStudied = value;
-    }
-
-    public static void fillStudent() {
-        System.out.print("Введите количество студентов: ");
-        int n = (new Scanner(System.in)).nextInt();
-        students = new Student[n];
-        System.out.println("Введите информацию о студентах: ");
-
-        for(int i = 0; i < students.length; i++) {
-            System.out.println("Студент " + (i + 1) +  "=>");
-            students[i] = new Student();
-        }
-
     }
 }
