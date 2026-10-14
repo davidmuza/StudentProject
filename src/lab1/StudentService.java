@@ -1,5 +1,7 @@
 package lab1;
 
+import java.util.Scanner;
+
 public class StudentService {
     public static void printStudent() {
         System.out.println("\nХарактеристики студентов:");
@@ -56,5 +58,18 @@ public class StudentService {
             }
 
         }
+    }
+
+    public static void fillStudent() {
+        System.out.print("Введите количество студентов: ");
+        int n = (new Scanner(System.in)).nextInt();
+        students = new Student[n];
+        System.out.println("Введите информацию о студентах: ");
+
+        for(int i = 0; i < students.length; i++) {
+            System.out.println("Студент " + (i + 1) +  "=>");
+            students[i] = new Student();
+        }
+
     }
 }
