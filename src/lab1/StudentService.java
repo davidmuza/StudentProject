@@ -83,4 +83,14 @@ public class StudentService {
         }
 
     }
+
+    public static Student findByName(String lastName) {
+        System.out.println("Поиск студента: " + lastName);
+        for (int i = 0; i < students.length; i++) {
+            if (students[i].getLastName().equals(lastName)) {
+                return students[i];
+            }
+        }
+        return null;
+    }
 }
